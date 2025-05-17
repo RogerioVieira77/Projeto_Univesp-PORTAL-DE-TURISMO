@@ -13,6 +13,8 @@ class TouristSpot(models.Model):
     city = models.CharField(max_length=100)
     address = models.TextField()
     rating = models.FloatField()
+    latitude = models.FloatField(null=True, blank=True)
+    longitude = models.FloatField(null=True, blank=True)
     place_id = models.CharField(max_length=100, unique=True)
     types = models.ManyToManyField(Type)
 
